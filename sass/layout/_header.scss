@@ -1,0 +1,90 @@
+.header {
+  width: 100%;
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (min-width: 1200px) {
+    min-height: 20vh;
+  }
+
+  &__container {
+    width: 80%;
+    height: 80%;
+    border: 3px solid $headerOutline;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+    @media (min-width: 1200px) {
+      width: 50%;
+    }
+
+    .logo {
+      width: 30%;
+      display: flex;
+      align-content: flex-end;
+      padding: .2rem;
+      @media (min-width: 768px) {
+        width: 25%;
+        padding: .7rem;
+      }
+      @media (min-width: 1024px) {
+        width: 20%;
+      }
+
+      &__img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .score {
+      width: 25%;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+      background-color: #fff;
+      border-radius: 3px;
+      @media (min-width: 768px) {
+        width: 20%;
+        margin-right: .3rem;
+      }
+      @media (min-width: 1024px) {
+        width: 15%;
+      }
+      @media (min-width: 1200px) {
+        width: 20%;
+      }
+
+      &__text {
+        width: 100%;
+        height: 40%;
+        padding-top: .5rem;
+        text-transform: uppercase;
+        font-size: .6rem;
+        letter-spacing: 1px;
+        color: $scoreText;
+        @media (min-width: 768px) {
+          font-size: .8rem;
+        }
+      }
+      &__number {
+        width: 100%;
+        height: 60%;
+        color: $darkText;
+        font-size: 2rem;
+        font-weight: 700;
+        padding-bottom: .5rem;
+        @media (min-width: 768px) {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+
+}
