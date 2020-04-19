@@ -12,7 +12,7 @@ body {
   margin: 0 auto;
   font-family: $primary-font;
   font-size: 62.5%; // 62.5% = 10px = 1rem
-  background: linear-gradient($background);
+  background: radial-gradient($background);
   position: relative;
 }
 
