@@ -22,61 +22,63 @@
       <h1 class="logo"><img class="logo__img" src="images/logo.svg" alt="rock paper scissors logo"></h1>
       <div class="score">
         <div class="score__text">score</div>
-        <div class="score__number">12</div>
+        <div class="score__number">0</div>
       </div>
   </div>
   </header>
   <main class="main">
     <div class="container">
-      <!-- <div class="triangle">
+      <div class="triangle select">
         <img class="triangle__img" src="images/bg-triangle.svg" alt="">
 
         <div class="box box-paper">
-          <div class="paper">
-            <img class="paper__img" src="images/icon-paper.svg" alt="">
+          <div data-option="paper" class="paper">
+            <img class="paper__img select__img" src="images/icon-paper.svg" alt="">
           </div>
         </div>
         
         <div class="box box-rock">
-          <div class="rock">
-            <img class="rock__img" src="images/icon-rock.svg" alt="">
+          <div data-option="rock" class="rock">
+            <img class="rock__img select__img" src="images/icon-rock.svg" alt="">
           </div>
         </div>
 
         <div class="box box-scissors">
-          <div class="scissors">
-            <img class="scissors__img" src="images/icon-scissors.svg" alt="">
+          <div data-option="scissors" class="scissors">
+            <img class="scissors__img select__img" src="images/icon-scissors.svg" alt="">
           </div>
         </div>
-      </div> -->
+      </div>
       <div class="container__result">
 
         <div class="hands">
 
           <div class="hand hand__player">
-            <div class="hand__rock">
-              <img class="rock__img" src="images/icon-rock.svg" alt="">
-            </div>
             <p class="hand__text">your picked</p>
           </div>
   
-          <div class="hand hand__ui">
-            <div class="hand__scissors">
-              <img class="scissors__img" src="images/icon-scissors.svg" alt="">
-            </div>
+          <div class="hand hand__ai">
             <p class="hand__text">the house picked</p>
           </div>
+
+          <!-- <div class="hand__rock">
+            <img class="rock__img" src="images/icon-rock.svg" alt="">
+          </div> -->
+
+           <!-- <div class="hand__paper">
+            <img class="paper__img" src="images/icon-paper.svg" alt="">
+          </div> -->
+
+          <!-- <div class="hand__scissors">
+            <img class="scissors__img" src="images/icon-scissors.svg" alt="">
+          </div> -->
+
+         
 
           <div class="result">
             <h4 class="result__text">you lose</h4>
             <button class="play__btn">play again</button>
           </div>
-
-          <!-- <div class="hand hand__ui">
-            <div class="hand__paper">
-              <img class="paper__img" src="images/icon-paper.svg.svg" alt="">
-            </div>
-          </div> -->
 
         </div>
         
@@ -91,7 +93,7 @@
       <img class="rules__img--size" src="images/image-rules.svg" alt="">
     </div>
     <div class="rules__closeIcon">
-      <img class="rules__closeIcon--size" src="images/icon-close.svg" alt="">
+      <img class="rules__closeIcon--size closeIcon" src="images/icon-close.svg" alt="">
     </div>
   </div>
 
@@ -100,5 +102,6 @@
     Coded by <a href="https://github.com/WronskiN">Norbert Wronski</a>.
   </footer>
   
+  <script src="script.js"></script>
 </body>
 </html>
