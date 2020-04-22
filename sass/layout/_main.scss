@@ -8,6 +8,7 @@
   overflow-y: hidden;
   @media (min-width: 1200px) {
     height: 80vh;
+    position: relative;
   }
 
   .container {
@@ -16,17 +17,28 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (min-width: 667px) and (orientation: landscape){
+      height: 70%;
+    }
     @media (min-width: 1200px) {
-      height: 30%;
+      height: 100%;
     }
 
     .triangle {
       width: 40%;
       height: 50%;
       position: relative;
+      @media (min-width: 667px) and (orientation: landscape){
+        width: 30%;
+        height: 60%;
+      }
       @media (min-width: 1200px) {
-        width: 15%;
-        height: 20%;
+        width: 25%;
+        height: 50%;
+      }
+      @media (min-width: 1440px) {
+        width: 30%;
+        height: 40%;
       }
       &__img {
         width: 100%;
@@ -40,14 +52,18 @@
       height: 5rem;
       border-radius: 50%;
       z-index: 2;
+      // @media (min-width: 667px) and (orientation: landscape){
+      //   width: 4rem;
+      //   height: 4rem;
+      // }
       @media (min-width: 768px) {
         width: 8rem;
         height: 8rem;
       }
-      @media (min-width: 1200px) {
-        width: 4rem;
-        height: 4rem;
-      }
+      // @media (min-width: 1200px) {
+      //   width: 4rem;
+      //   height: 4rem;
+      // }
     }
     .box-paper {
       top: -2.5rem;
@@ -56,10 +72,10 @@
         top: -4rem;
         left: -4rem;
       }
-      @media (min-width: 1200px) {
-        top: -2rem;
-        left: -2rem;
-      }
+      // @media (min-width: 1200px) {
+      //   top: -2rem;
+      //   left: -2rem;
+      // }
     }
     .box-rock {
       bottom: -2.5rem;
@@ -68,9 +84,9 @@
       @media (min-width: 768px) {
         bottom: -4rem;
       }
-      @media (min-width: 1200px) {
-        bottom: -9rem;
-      }
+      // @media (min-width: 1200px) {
+      //   bottom: -9rem;
+      // }
     }
     .box-scissors {
       top: -2.5rem;
@@ -79,10 +95,10 @@
         top: -4rem;
         right: -4rem;
       }
-      @media (min-width: 1200px) {
-        top: -2rem;
-        right: -2rem;
-      }
+      // @media (min-width: 1200px) {
+      //   top: -2rem;
+      //   right: -2rem;
+      // }
     }
     .paper, .rock, .scissors {
       width: 100%;
@@ -119,13 +135,13 @@
           top: -1rem;
           left: -1rem;
         }
-        @media (min-width: 1200px) {
-          width: 6rem;
-          height: 6rem;
-          top: -1rem;
-          left: -1rem;
-          box-shadow: -1px 3px hsl(230, 89%, 62%);
-        }
+        // @media (min-width: 1200px) {
+        //   width: 6rem;
+        //   height: 6rem;
+        //   top: -1rem;
+        //   left: -1rem;
+        //   box-shadow: -1px 3px hsl(230, 89%, 62%);
+        // }
       }
     }
     .rock {
@@ -146,13 +162,13 @@
           top: -1rem;
           left: -1rem;
         }
-        @media (min-width: 1200px) {
-          width: 6rem;
-          height: 6rem;
-          top: -1rem;
-          left: -1rem;
-          box-shadow: -1px 3px hsl(349, 71%, 52%);
-        }
+        // @media (min-width: 1200px) {
+        //   width: 6rem;
+        //   height: 6rem;
+        //   top: -1rem;
+        //   left: -1rem;
+        //   box-shadow: -1px 3px hsl(349, 71%, 52%);
+        // }
       }
     }
     .scissors {
@@ -173,13 +189,13 @@
           top: -1rem;
           left: -1rem;
         }
-        @media (min-width: 1200px) {
-          width: 6rem;
-          height: 6rem;
-          top: -1rem;
-          left: -1rem;
-          box-shadow: -1px 3px hsl(39, 89%, 49%);
-        }
+        // @media (min-width: 1200px) {
+        //   width: 6rem;
+        //   height: 6rem;
+        //   top: -1rem;
+        //   left: -1rem;
+        //   box-shadow: -1px 3px hsl(39, 89%, 49%);
+        // }
       }
     }
 
@@ -198,8 +214,20 @@
     border: 2px solid $headerOutline;
     border-radius: 5px;
     cursor: pointer;
+    @media (min-width: 667px) and (orientation: landscape){
+      margin: 0;
+      position: absolute;
+      right: 5%;
+      bottom: 10%;
+    }
     @media (min-width: 768px) {
       font-size: 1.5rem;
+    }
+    @media (min-width: 1200px) {
+      margin: 0;
+      position: absolute;
+      right: 5%;
+      bottom: 10%;
     }
 
     &:hover {

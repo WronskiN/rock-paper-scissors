@@ -176,6 +176,7 @@ body {
 @media (min-width: 1200px) {
   .main {
     height: 80vh;
+    position: relative;
   }
 }
 
@@ -193,9 +194,15 @@ body {
           align-items: center;
 }
 
+@media (min-width: 667px) and (orientation: landscape) {
+  .main .container {
+    height: 70%;
+  }
+}
+
 @media (min-width: 1200px) {
   .main .container {
-    height: 30%;
+    height: 100%;
   }
 }
 
@@ -205,10 +212,24 @@ body {
   position: relative;
 }
 
+@media (min-width: 667px) and (orientation: landscape) {
+  .main .container .triangle {
+    width: 30%;
+    height: 60%;
+  }
+}
+
 @media (min-width: 1200px) {
   .main .container .triangle {
-    width: 15%;
-    height: 20%;
+    width: 25%;
+    height: 50%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .main .container .triangle {
+    width: 30%;
+    height: 40%;
   }
 }
 
@@ -233,13 +254,6 @@ body {
   }
 }
 
-@media (min-width: 1200px) {
-  .main .container .box {
-    width: 4rem;
-    height: 4rem;
-  }
-}
-
 .main .container .box-paper {
   top: -2.5rem;
   left: -2.5rem;
@@ -249,13 +263,6 @@ body {
   .main .container .box-paper {
     top: -4rem;
     left: -4rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  .main .container .box-paper {
-    top: -2rem;
-    left: -2rem;
   }
 }
 
@@ -272,12 +279,6 @@ body {
   }
 }
 
-@media (min-width: 1200px) {
-  .main .container .box-rock {
-    bottom: -9rem;
-  }
-}
-
 .main .container .box-scissors {
   top: -2.5rem;
   right: -2.5rem;
@@ -287,13 +288,6 @@ body {
   .main .container .box-scissors {
     top: -4rem;
     right: -4rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  .main .container .box-scissors {
-    top: -2rem;
-    right: -2rem;
   }
 }
 
@@ -346,17 +340,6 @@ body {
   }
 }
 
-@media (min-width: 1200px) {
-  .main .container .paper:after {
-    width: 6rem;
-    height: 6rem;
-    top: -1rem;
-    left: -1rem;
-    -webkit-box-shadow: -1px 3px #4865f4;
-            box-shadow: -1px 3px #4865f4;
-  }
-}
-
 .main .container .rock:after {
   content: '';
   position: absolute;
@@ -378,17 +361,6 @@ body {
     height: 10rem;
     top: -1rem;
     left: -1rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  .main .container .rock:after {
-    width: 6rem;
-    height: 6rem;
-    top: -1rem;
-    left: -1rem;
-    -webkit-box-shadow: -1px 3px #dc2e4e;
-            box-shadow: -1px 3px #dc2e4e;
   }
 }
 
@@ -416,17 +388,6 @@ body {
   }
 }
 
-@media (min-width: 1200px) {
-  .main .container .scissors:after {
-    width: 6rem;
-    height: 6rem;
-    top: -1rem;
-    left: -1rem;
-    -webkit-box-shadow: -1px 3px #ec9e0e;
-            box-shadow: -1px 3px #ec9e0e;
-  }
-}
-
 .main .rules__btn {
   margin: 0 auto;
   text-transform: uppercase;
@@ -442,9 +403,27 @@ body {
   cursor: pointer;
 }
 
+@media (min-width: 667px) and (orientation: landscape) {
+  .main .rules__btn {
+    margin: 0;
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
+  }
+}
+
 @media (min-width: 768px) {
   .main .rules__btn {
     font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main .rules__btn {
+    margin: 0;
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
   }
 }
 
