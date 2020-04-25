@@ -35,6 +35,7 @@ function aiChoice() {
 
 // Select hand by player and ai amd show hand in Step 2
 function handSelection() {
+
   // Player hand selection
   game.playerHand = this.dataset.option;
   console.log(game.playerHand);
@@ -45,6 +46,7 @@ function handSelection() {
   } else {
     playerHand.insertAdjacentHTML('afterbegin', scissors);
   }
+
   // Computer hand selection
   aiChoice();
   if(game.aiHand === 'rock') {
@@ -78,7 +80,7 @@ function publishResult(result) {
     score.textContent = ++gameSummary.numbers;
     resultText.textContent = 'You Win';
     persistData();
-  } else if (result === 'loss') {
+  } else if (result === 'loss' && score.textContent >= 1) {
     score.textContent = --gameSummary.numbers;
     resultText.textContent = 'You Lose';
     persistData();
@@ -88,10 +90,10 @@ function publishResult(result) {
 };
 
 // Restore score number on page loead
-// window.addEventListener('load', () => {
-//   // score.textContent = gameSummary.numbers;
-//   score.textContent = readStorage();
-// });
+window.addEventListener('load', () => {
+  score.textContent = gameSummary.numbers;
+  readStorage();
+});
 
 // Return to the Step 1 and reset ai & player hand
 function playAgain() {
@@ -114,31 +116,38 @@ rulesBtn.addEventListener('click', () => {
   });
 });
 
-/////////////// local storage --- NOT WORKING YET ! //////////////////
-// function persistData() {
-//   'use strict';
+  document.querySelector('.score__reset').addEventListener('click', resetScore); 
+
+  function resetScore() {
+    gameSummary.numbers = 0
+    score.textContent = gameSummary.numbers;
+    localStorage.clear();
+  }
+
+///////////// local storage //////////////////
+function persistData() {
+  'use strict';
   
-//   window.localStorage.setItem('score', JSON.stringify(gameSummary.numbers));
-//   console.log(localStorage.getItem('score'));
+  window.localStorage.setItem('score', JSON.stringify(gameSummary.numbers));
 
-//   // function localStorageTest(){
-//   //   const test = "test" + new Date().valueOf();
-//   //   try {
-//   //       localStorage.setItem(test, test);
-//   //       localStorage.removeItem(test);
-//   //       return true;
-//   //   } catch(e) {
-//   //       return false;
-//   //   }
-//   // }
+  function localStorageTest(){
+    const test = "test" + new Date().valueOf();
+    try {
+        localStorage.setItem(test, test);
+        localStorage.removeItem(test);
+        return true;
+    } catch(e) {
+        return false;
+    }
+  }
 
-//   // if (localStorageTest()) {
-//   //   localStorage.setItem("myElement", JSON.stringify(gameSummary.numbers));
-//   // }
-// };
+  if (localStorageTest()) {
+    localStorage.setItem("myElement", JSON.stringify(gameSummary.numbers));
+  }
+};
 
-// function readStorage() {
-//   const storage = JSON.parse(localStorage.getItem('score'));
-//   // Restore score from localStorage
-//   if (storage) { return score = storage };
-// };
+function readStorage() {
+  const storage = JSON.parse(localStorage.getItem('score'));
+  // Restore score from localStorage
+  if (storage) { return score.textContent = storage };
+};
